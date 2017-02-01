@@ -43,7 +43,7 @@
         "parameters" : [ {
           "in" : "body",
           "name" : "body",
-          "description" : "cloth object that needs to be added to the store",
+          "description" : "cloth-object that needs to be added to the store",
           "required" : true,
           "schema" : {
             "$ref" : "#/definitions/cloth"
@@ -68,7 +68,7 @@
         "parameters" : [ {
           "in" : "body",
           "name" : "body",
-          "description" : "cloth object that needs to be added to the store",
+          "description" : "cloth-object that needs to be added to the store",
           "required" : true,
           "schema" : {
             "$ref" : "#/definitions/cloth"
@@ -688,22 +688,6 @@
         "name" : "Order"
       }
     },
-    "cloth_category" : {
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "name" : {
-          "type" : "string",
-          "example" : "trousers"
-        }
-      },
-      "xml" : {
-        "name" : "cloth_category"
-      }
-    },
     "User" : {
       "type" : "object",
       "properties" : {
@@ -763,7 +747,8 @@
           "format" : "int64"
         },
         "category" : {
-          "$ref" : "#/definitions/cloth_category"
+          "type" : "string",
+          "example" : "suit with trousers"
         },
         "size" : {
           "type" : "string",
